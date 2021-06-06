@@ -1,0 +1,31 @@
+const Discord = require('discord.js')
+const { MessageEmbed } = require('discord.js')
+
+module.exports.run = async (bot, message, args) => {
+
+    let helpembed = new MessageEmbed()
+    .setTitle(`Help Command for ${bot.user.username}`)
+    .setDescription(`These are the commands currently available to you with this Bot.`)
+    .setColor("#4506fc")
+    .addField("Help - Displays the help panel", true)
+    .addField("Prefix - $", true)
+    .addField("Dababy - Turns someone into a convertible, correct use: $dababy {@user}", true)
+    .addField("Kill - Kills any user you ping, correct use: $kill {@user}", true)
+    .addField("Hack - Hacks any user you ping, correct use: $hack {@user}", true)
+    .addField("Cum - says you cummed on someones face, correct use: cum {user}" , true)
+    .addField("Packwatch - Smokes someones pack, correct use: $packwatch {@user}", true)
+    .addField("Ping - Displays the latency of the bot, correct use: $ping", true)
+    .addField("Tictactoe - You can play tictactoe with another player! correct use: $tictactoe {@user}", true)
+    .addField("RNG - Picks a number between 1 and 100, correct use: $rng", true)
+    .addField("Semen - Displays how many liters of semen are in your testicles, correct use: $semen", true)
+    .addField("Sus - Displays a percentage on how sus you are, correct use: $sus", true)
+    .addField("Sex - Displays that you have had intercourse with a user, correct use: $sex {@user}", true)
+    .addField("**These are commands that are not accessible to you but they are accessible to admins**", true)
+    .addField("Ban - Bans an user from the server, correct use: $ban {@user}", true)
+    .addField("Kick - Kicks an user from the server, correct use: $kick {@user}", true)
+    .addField("Say - Say any message as the bot, correct use: $say (insert your message)", true)
+    .addField("***__COMMANDS THAT ARE ONLY ACCESSIBLE TO THE OWNER OF THE BOT (Rainyy)__***", true)
+    .addField("$Eval - Executes lines of code to ex. spam.", true)
+
+    message.channel.send(helpembed)
+}
