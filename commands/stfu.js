@@ -1,12 +1,4 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
-const token = 'ODM1MjE5MTkwMDI0NjM0NDAw.YIMQfA.-3CsHx8kbcetaXqFroGo3AK_Oyo';
- 
-client.login(token);
- 
-client.on('message', message => {
-
-  if (Discord.User.bot) return;
+if (Discord.User.bot) return;
  
     if(message.content.toLowerCase().includes('>genie'))
         message.channel.send("SHUT THE FUCK UP");
@@ -23,4 +15,3 @@ client.on('message', message => {
         message.channel.send("SHUT THE FUCKING N WORDS UP!!!!!!!")
         if(message.content.toLowerCase().includes('$tank'))
         message.channel.send("https://cdn.discordapp.com/emojis/828627868064940074.png?v=1, https://cdn.discordapp.com/emojis/828656190967775252.png?v=1, https://cdn.discordapp.com/emojis/828657930316283915.png?v=1, https://cdn.discordapp.com/emojis/828939786336731148.png?v=1, https://cdn.discordapp.com/emojis/828939842246148136.png?v=1")
-})
