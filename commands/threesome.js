@@ -1,13 +1,14 @@
 module.exports.run = async (client, message, args) => {
-    const user = message.mentions.users.first();
-if (user) {
-      const member = message.guild.member(user);
-      if (member) {
-           message.channel.send(`<@${message.author.id}> <@${user.id}> and Ali_011 had a threesome!`);
-    } else {
-      message.channel.send("not how u use this command dumbass, $threesome {user} {user}")
-    }     
-  } else {
-    message.channel.send("not how u use this command dumbass, threesome {user} {user}")
-  }
+    const user = args[0];
+    const user2 = args[1] 
+    const user3 = args[2]
+    if(!user) {
+      message.channel.send("dumbass")
+    }
+    else if (!user2) {
+      message.channel.send(`$user ${user} so tasty`)
+    } 
+    else {
+      message.channel.send(`${user} just had the big sex with ${user2} and ${user3}`);
+    }
 }
